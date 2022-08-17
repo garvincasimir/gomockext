@@ -49,3 +49,6 @@ func TestArg1StringStartsWith(t *testing.T) {
 	fooBar.WithString("FooBar")
 }
 ```
+
+## Contributing
+Please feel free to submit bugs, pull requests and suggestions for improving the library. The repo is configured to create a custom [Codespace](https://github.com/features/codespaces) with everything you need to start contributing
