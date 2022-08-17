@@ -1,0 +1,16 @@
+{
+    "[go]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "golang.go"
+    },
+    "go.testFlags": [
+        "-v"
+    ],
+    "go.coverOnSingleTestFile": true,
+    "go.coverOnSingleTest": true,
+    "go.coverOnSave": false,
+    "go.lintOnSave": "off",
+    "editor.formatOnSave": true,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 3000
+}
