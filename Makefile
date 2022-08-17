@@ -1,5 +1,4 @@
 .EXPORT_ALL_VARIABLES:
-TOOLS=$(CURDIR)/_tools
 CGO_ENABLED=0
 
 .PHONY: ci-build
@@ -14,7 +13,6 @@ tools:
 
 .PHONY: clean
 clean:
-	rm -rf _tools
 	go clean -cache -testcache -modcache
 
 .PHONY: build

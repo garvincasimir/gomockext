@@ -5,4 +5,3 @@ type FooBar interface {
 	WithSlice(arg1 []string)
 	WithMap(arg1 map[string]int)
 }
-
