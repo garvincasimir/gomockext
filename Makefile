@@ -8,10 +8,8 @@ ci-build: tools build test lint
 
 .PHONY: tools
 tools:
-	mkdir -p $(TOOLS)
-	@[ ! -f $(TOOLS)/go.mod ] && cd $(TOOLS) && go mod init tools || true
-	cd $(TOOLS) && go install github.com/golangci/golangci-lint/cmd/golangci-lint@v1.48.0
-	cd $(TOOLS) && go install github.com/golang/mock/mockgen@v1.6.0
+	go install github.com/golangci/golangci-lint/cmd/golangci-lint@v1.48.0
+	go install github.com/golang/mock/mockgen@v1.6.0
 
 
 .PHONY: clean
