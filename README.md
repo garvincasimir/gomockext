@@ -3,14 +3,8 @@ gomockext is a library which adds extensions useful for simplifying testing usin
 
 ## Installation
 
-Once you have [installed Go][golang-install], install the `mockgen` tool.
-
-**Note**: If you have not done so already be sure to add `$GOPATH/bin` to your
-`PATH`.
 
 To get the latest released version use:
-
-
 
 ### Go 1.18+
 
