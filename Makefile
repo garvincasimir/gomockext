@@ -3,7 +3,7 @@ TOOLS=$(CURDIR)/_tools
 CGO_ENABLED=0
 
 .PHONY: ci-build
-ci-build: build test lint
+ci-build: tools build test lint
 
 
 .PHONY: tools
