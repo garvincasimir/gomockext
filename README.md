@@ -36,7 +36,7 @@ func TestArg1StringStartsWith(t *testing.T) {
 }
 ```
 
-### BuiltIn Matcher
+### Built-In Matcher
 The library comes with several built in matchers. Please take a look at the `examples` folder for usage examples. 
 
 ```go
