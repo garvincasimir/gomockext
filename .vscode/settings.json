@@ -11,5 +11,6 @@
     "go.coverOnSave": false,
     "go.lintOnSave": "off",
     "editor.formatOnSave": true,
-    "files.autoSave": "afterDelay"
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 3000
 }
