@@ -1,4 +1,4 @@
-package slice
+package sliceext
 
 import mockext "github.com/garvincasimir/gomockext"
 

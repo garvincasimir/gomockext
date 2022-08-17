@@ -16,10 +16,8 @@ func (c CustomMatcher) String() string {
 }
 
 func Match(isMatch MatchFunc, message string) CustomMatcher {
-	return CustomMatcher {
+	return CustomMatcher{
 		IsMatch: isMatch,
 		Message: message,
 	}
 }
-
-
