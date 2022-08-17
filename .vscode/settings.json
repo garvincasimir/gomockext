@@ -4,6 +4,9 @@
         "editor.formatOnSaveMode": "file"
     },
     "go.testFlags": [
-      "-v"
-    ]
+        "-v"
+    ],
+    "go.coverOnSingleTestFile": true,
+    "go.coverOnSingleTest": true,
+    "go.coverOnSave": true
 }

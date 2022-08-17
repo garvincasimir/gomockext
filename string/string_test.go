@@ -44,3 +44,25 @@ func TestEndsWithFalseWithNoneString(t *testing.T) {
 		t.Error("Should not match on non string")
 	} 
 }
+
+
+func TestContainsFalseWithNoMatch(t *testing.T) {
+	matcher := Contains("abc", "Contains abc")
+	if matcher.Matches("def") {
+		t.Error("Does does contain abc")
+	}
+}
+
+func TestContainsTrueWithMatch(t *testing.T) {
+	matcher := Contains("def", "Contains def")
+	if !matcher.Matches("abcdef") {
+		t.Error("abcdef does contain def")
+	}
+}
+
+func TestContainsFalseWithNoneString(t *testing.T) {
+	matcher := Contains("abc", "Contains abc")
+	if matcher.Matches(823) {
+		t.Error("Should not match on non string")
+	} 
+}
