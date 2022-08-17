@@ -1,8 +1,8 @@
 package stringext
 
 import (
-	"strings"
 	mockext "github.com/garvincasimir/gomockext"
+	"strings"
 )
 
 type StrCheckFunc = func(string, string) bool
@@ -41,5 +41,3 @@ func EndsWith(suffix, message string) mockext.CustomMatcher {
 func Contains(substr, message string) mockext.CustomMatcher {
 	return StringsMatcher(substr, message, strings.Contains)
 }
-
-

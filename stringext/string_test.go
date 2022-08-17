@@ -20,9 +20,8 @@ func TestStartsWithFalseWithNoneString(t *testing.T) {
 	matcher := StartsWith("abc", "Starts with abc")
 	if matcher.Matches(823) {
 		t.Error("Should not match on non string")
-	} 
+	}
 }
-
 
 func TestEndsWithFalseWithNoMatch(t *testing.T) {
 	matcher := EndsWith("abc", "Ends with abc")
@@ -42,9 +41,8 @@ func TestEndsWithFalseWithNoneString(t *testing.T) {
 	matcher := EndsWith("abc", "Ends with abc")
 	if matcher.Matches(823) {
 		t.Error("Should not match on non string")
-	} 
+	}
 }
-
 
 func TestContainsFalseWithNoMatch(t *testing.T) {
 	matcher := Contains("abc", "Contains abc")
@@ -64,5 +62,5 @@ func TestContainsFalseWithNoneString(t *testing.T) {
 	matcher := Contains("abc", "Contains abc")
 	if matcher.Matches(823) {
 		t.Error("Should not match on non string")
-	} 
+	}
 }
