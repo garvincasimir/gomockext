@@ -37,7 +37,7 @@ func TestArg1StringStartsWith(t *testing.T) {
 ```
 
 ### Built-In Matcher
-The library comes with several built in matchers. Please take a look at the `examples` folder for usage examples. 
+The library comes with several built in matchers. Please take a look at the [examples](https://github.com/garvincasimir/gomockext/tree/main/example) folder for usage examples. 
 
 ```go
 // StartsWith returns a matcher which checks if a string starts with a specific prefix
