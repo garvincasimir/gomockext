@@ -51,7 +51,7 @@ func HasItems[T comparable](subset []T, message string) mockext.CustomMatcher {
 //
 // Example usage:
 //   Any(func(u user)bool { return u.name == "joe" }, "One of the users is Joe")
-func Any[T any](checkFunc func(T)bool, message string) mockext.CustomMatcher {
+func Any[T any](checkFunc func(T) bool, message string) mockext.CustomMatcher {
 	return mockext.Match(func(got interface{}) bool {
 		if s, ok := got.([]T); ok {
 			for _, v := range s {
@@ -64,19 +64,18 @@ func Any[T any](checkFunc func(T)bool, message string) mockext.CustomMatcher {
 	}, message)
 }
 
-
 // All matcher returns true if actual is a []T and the checkFuc returns true for all of the items
 //
 // Example usage:
 //   All(func(u user)bool { return u.age > 20" }, "All users over 20")
-func All[T any](checkFunc func(T)bool, message string) mockext.CustomMatcher {
+func All[T any](checkFunc func(T) bool, message string) mockext.CustomMatcher {
 	return mockext.Match(func(got interface{}) bool {
 		if s, ok := got.([]T); ok {
 			for _, v := range s {
 				if !checkFunc(v) {
 					return false
 				}
-			} 
+			}
 		} else {
 			return false
 		}
