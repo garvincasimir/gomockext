@@ -9,7 +9,7 @@ To get the latest released version use:
 ### Go 1.18+
 
 ```bash
-go install github.com/garvincasimir/gomockext@v1.0.0
+go get github.com/garvincasimir/gomockext@v1.0.0
 ```
 ## Usage
 
@@ -37,7 +37,7 @@ func TestArg1StringStartsWith(t *testing.T) {
 ```
 
 ### Built-In Matcher
-The library comes with several built in matchers. Please take a look at the `examples` folder for usage examples. 
+The library comes with several built in matchers. Please take a look at the [examples](https://github.com/garvincasimir/gomockext/tree/main/example) folder for usage examples. 
 
 ```go
 // StartsWith returns a matcher which checks if a string starts with a specific prefix
