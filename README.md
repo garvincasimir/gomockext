@@ -9,7 +9,7 @@ To get the latest released version use:
 ### Go 1.18+
 
 ```bash
-go install github.com/garvincasimir/gomockext@v1.0.0
+go get github.com/garvincasimir/gomockext@v1.0.0
 ```
 ## Usage
 
