@@ -8,7 +8,7 @@ import (
 type StrCheckFunc = func(string, string) bool
 
 // StringsMatcher returns a matcher that calls the supplied strings.[funcName]
-//  actual string given the input as the second paraameter. Returns false if actual is not a string
+//  actual string given the input as the second parameter. Returns false if actual is not a string
 func StringsMatcher(input, message string, checkFunc StrCheckFunc) mockext.CustomMatcher {
 	return mockext.Match(func(got any) bool {
 		if str, ok := got.(string); ok {
