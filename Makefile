@@ -38,7 +38,7 @@ lint:
 .PHONY: test
 test:
 	@echo "==> running Go tests <=="
-	go test -p 1 -v -race -short -covermode=atomic -coverprofile=coverage.out ./... 
+	CGO_ENABLED=1 go test -p 1 -v -race -short -covermode=atomic -coverprofile=coverage.out ./... 
 
 .PHONY: examplemock
 examplemock:
