@@ -12,6 +12,5 @@
     "go.lintOnSave": "off",
     "editor.formatOnSave": true,
     "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 3000,
-    "go.autocompleteUnimportedPackages": true
+    "files.autoSaveDelay": 3000
 }
