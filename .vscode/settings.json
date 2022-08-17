@@ -1,0 +1,9 @@
+{
+    "editor.formatOnSave": true,
+    "[go]": {
+        "editor.formatOnSaveMode": "file"
+    },
+    "go.testFlags": [
+      "-v"
+    ]
+}
