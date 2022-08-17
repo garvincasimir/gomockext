@@ -16,7 +16,7 @@ clean:
 	go clean -cache -testcache -modcache
 
 .PHONY: build
-proxima-tenant-provisioning-workflow:
+build:
 	go build -v ./...
 
 .PHONY: fmt
