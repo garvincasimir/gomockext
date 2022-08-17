@@ -7,9 +7,9 @@ import (
 // HasKey matcher returns true if actual is a map[K]V and all the keys exist in map[K]V
 //
 // Example usage:
-//   HasKey("id1", "Has joe")
+//   HasKey[string, string]("id1", "Has joe")
 func HasKey[K comparable, V any](key K, message string) mockext.CustomMatcher {
-	return HasKeys[K,V]([]K{key}, message)
+	return HasKeys[K, V]([]K{key}, message)
 }
 
 // HasKeys matcher returns true if actual is a map[K]V and all the keys exist in map[K]V
@@ -37,9 +37,8 @@ func HasKeys[K comparable, V any](keys []K, message string) mockext.CustomMatche
 // Example usage:
 //   HasItem("id1","joe", "Has joe")
 func HasItem[K comparable, V comparable](key K, val V, message string) mockext.CustomMatcher {
-	return HasItems(map[K]V{key:val}, message)
+	return HasItems(map[K]V{key: val}, message)
 }
-
 
 // HasItems matcher returns true if actual is a map[K]V and the items is a subset of map[K]V
 //
@@ -60,12 +59,11 @@ func HasItems[K comparable, V comparable](items map[K]V, message string) mockext
 	}, message)
 }
 
-
 // All matcher returns true if actual is a map[K]V and the checkFunc returns true for any of the items
 //
 // Example usage:
 //   All(func(uid string, u User)bool { return u.name == "joe" }, "Any user named joe")
-func Any[K comparable, V any](checkFunc func(K, V)bool , message string) mockext.CustomMatcher {
+func Any[K comparable, V any](checkFunc func(K, V) bool, message string) mockext.CustomMatcher {
 	return mockext.Match(func(got any) bool {
 		if m, ok := got.(map[K]V); ok {
 			for k, v := range m {
@@ -82,15 +80,17 @@ func Any[K comparable, V any](checkFunc func(K, V)bool , message string) mockext
 //
 // Example usage:
 //   All(func(uid string, u User)bool { return u.age > 20" }, "All users over 20")
-func All[K comparable, V any](checkFunc func(K, V)bool , message string) mockext.CustomMatcher {
+func All[K comparable, V any](checkFunc func(K, V) bool, message string) mockext.CustomMatcher {
 	return mockext.Match(func(got any) bool {
 		if m, ok := got.(map[K]V); ok {
 			for k, v := range m {
-				if checkFunc(k, v) {
-					return true
+				if !checkFunc(k, v) {
+					return false
 				}
 			}
+		} else {
+			return false
 		}
-		return false
+		return true
 	}, message)
 }
