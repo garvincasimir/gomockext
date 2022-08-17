@@ -10,61 +10,61 @@ import (
 	gomock "github.com/golang/mock/gomock"
 )
 
-// MockFooBarAble is a mock of FooBarAble interface.
-type MockFooBarAble struct {
+// MockFooBar is a mock of FooBar interface.
+type MockFooBar struct {
 	ctrl     *gomock.Controller
-	recorder *MockFooBarAbleMockRecorder
+	recorder *MockFooBarMockRecorder
 }
 
-// MockFooBarAbleMockRecorder is the mock recorder for MockFooBarAble.
-type MockFooBarAbleMockRecorder struct {
-	mock *MockFooBarAble
+// MockFooBarMockRecorder is the mock recorder for MockFooBar.
+type MockFooBarMockRecorder struct {
+	mock *MockFooBar
 }
 
-// NewMockFooBarAble creates a new mock instance.
-func NewMockFooBarAble(ctrl *gomock.Controller) *MockFooBarAble {
-	mock := &MockFooBarAble{ctrl: ctrl}
-	mock.recorder = &MockFooBarAbleMockRecorder{mock}
+// NewMockFooBar creates a new mock instance.
+func NewMockFooBar(ctrl *gomock.Controller) *MockFooBar {
+	mock := &MockFooBar{ctrl: ctrl}
+	mock.recorder = &MockFooBarMockRecorder{mock}
 	return mock
 }
 
 // EXPECT returns an object that allows the caller to indicate expected use.
-func (m *MockFooBarAble) EXPECT() *MockFooBarAbleMockRecorder {
+func (m *MockFooBar) EXPECT() *MockFooBarMockRecorder {
 	return m.recorder
 }
 
 // WithMap mocks base method.
-func (m *MockFooBarAble) WithMap(arg1 map[string]int) {
+func (m *MockFooBar) WithMap(arg1 map[string]int) {
 	m.ctrl.T.Helper()
 	m.ctrl.Call(m, "WithMap", arg1)
 }
 
 // WithMap indicates an expected call of WithMap.
-func (mr *MockFooBarAbleMockRecorder) WithMap(arg1 interface{}) *gomock.Call {
+func (mr *MockFooBarMockRecorder) WithMap(arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WithMap", reflect.TypeOf((*MockFooBarAble)(nil).WithMap), arg1)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WithMap", reflect.TypeOf((*MockFooBar)(nil).WithMap), arg1)
 }
 
 // WithSlice mocks base method.
-func (m *MockFooBarAble) WithSlice(arg1 []string) {
+func (m *MockFooBar) WithSlice(arg1 []string) {
 	m.ctrl.T.Helper()
 	m.ctrl.Call(m, "WithSlice", arg1)
 }
 
 // WithSlice indicates an expected call of WithSlice.
-func (mr *MockFooBarAbleMockRecorder) WithSlice(arg1 interface{}) *gomock.Call {
+func (mr *MockFooBarMockRecorder) WithSlice(arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WithSlice", reflect.TypeOf((*MockFooBarAble)(nil).WithSlice), arg1)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WithSlice", reflect.TypeOf((*MockFooBar)(nil).WithSlice), arg1)
 }
 
 // WithString mocks base method.
-func (m *MockFooBarAble) WithString(arg1 string) {
+func (m *MockFooBar) WithString(arg1 string) {
 	m.ctrl.T.Helper()
 	m.ctrl.Call(m, "WithString", arg1)
 }
 
 // WithString indicates an expected call of WithString.
-func (mr *MockFooBarAbleMockRecorder) WithString(arg1 interface{}) *gomock.Call {
+func (mr *MockFooBarMockRecorder) WithString(arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WithString", reflect.TypeOf((*MockFooBarAble)(nil).WithString), arg1)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WithString", reflect.TypeOf((*MockFooBar)(nil).WithString), arg1)
 }

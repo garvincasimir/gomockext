@@ -40,7 +40,7 @@ test:
 	@echo "==> running Go tests <=="
 	CGO_ENABLED=1 go test -p 1 -v -race -short -covermode=atomic -coverprofile=coverage.out ./... 
 
-.PHONY: examplemock
-examplemock:
+.PHONY: mock
+mock:
 	mockgen -source example/foobar.go -destination example/foobar_mock.go -package example
 
